@@ -35,9 +35,10 @@ alias \
 	g="git" \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
-	sdn="sudo shutdown -h now" \
+	sdn="shutdown -h now" \
 	e="$EDITOR" \
 	v="$EDITOR" \
+	p="pacman" \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
