@@ -26,7 +26,6 @@ else
         [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zathura/zathurarc.bak" ] && unlink "${XDG_CONFIG_HOME:-$HOME/.config}/zathura/zathurarc" && mv "${XDG_CONFIG_HOME:-$HOME/.config}/zathura/zathurarc.bak" "${XDG_CONFIG_HOME:-$HOME/.config}/zathura/zathurarc"
 fi
 
-
 xwallpaper --zoom "$bgloc"
 wal -R
 pywal-discord -p $HOME/.local/src/powercord/src/Powercord/themes/pywal
