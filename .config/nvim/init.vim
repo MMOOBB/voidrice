@@ -29,7 +29,6 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-set linebreak
 
 " Some basics:
 	nnoremap c "_c
