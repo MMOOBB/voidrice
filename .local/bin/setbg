@@ -32,4 +32,3 @@ fi
 
 xwallpaper --zoom "$bgloc"
 wal -R
-pywal-discord -p $HOME/.local/src/powercord/src/Powercord/themes/pywal
