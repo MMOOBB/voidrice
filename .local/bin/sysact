@@ -17,10 +17,10 @@ case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n�
 	'🔒 lock') slock ;;
 	"🚪 leave $WM") kill -TERM "$(wmpid)" ;;
 	"♻️ renew $WM") kill -HUP "$(wmpid)" ;;
-	'🐻 hibernate') slock $ctl hibernate -i ;;
+	'🐻 hibernate') slock sudo zzz -Z ;;
 	'💤 sleep') slock sudo zzz ;;
-	'🔃 reboot') $ctl reboot -i ;;
-	'🖥️shutdown') $ctl poweroff -i ;;
+	'🔃 reboot') sudo $ctl reboot -i ;;
+	'🖥️shutdown')sudo $ctl poweroff -i ;;
 	'📺 display off') xset dpms force off ;;
 	*) exit 1 ;;
 esac
