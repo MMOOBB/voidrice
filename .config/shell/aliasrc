@@ -11,6 +11,8 @@ for command in loginctl mount umount sv pacman updatedb su shutdown poweroff reb
 	alias $command="sudo $command"
 done; unset command
 
+se() { cd ~/.local/bin; $EDITOR $(fzf) ;}
+
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
