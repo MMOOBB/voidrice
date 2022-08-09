@@ -4,6 +4,7 @@ set +e;
 infile="${1}";
 outfile="${2}";
 imagesize="${3}";
+args="${@:4}";
 
 if [[ -z "${imagesize}" ]]; then imagesize="100"; fi
 if [[ ! -r "${infile}" ]]; then
@@ -19,7 +20,7 @@ Thanks to https://3dprinting.stackexchange.com/a/6047/30537 for the idea.
 
 Usage:
 	path/to/stl2png.sh path/to/infile.stl path/to/outfile.png image_size
-	
+
 	...where:
 		path/to/infile.stl	is the path to the input stl file to convert
 		path/to/outfile.png	is the path to the output PNG image to write
@@ -42,7 +43,7 @@ fi
 
 temp_dir="$(mktemp --tmpdir -d "stl2png-XXXXXXX")";
 
-if [[ -z "${DEBUG_STL2PNG}" ]]; then 
+if [[ -z "${DEBUG_STL2PNG}" ]]; then
 	on_exit() {
 		rm -rf "${temp_dir}";
 	}
@@ -70,7 +71,7 @@ cp "${infile}" "${temp_dir}/source.stl";
 echo "import(\"source.stl\", convexity=10);" >"${temp_dir}/thumbnail.scad";
 
 # We need to use xvfb here, because otherwise OpenSCAD crashes when used with the nautilus thumbnailer as it claims it can't open the display.
-xvfb-run --auto-servernum openscad --imgsize "${imagesize},${imagesize}" -o "${outfile}" "${temp_dir}/thumbnail.scad" >"${temp_dir}/output.log" 2>&1;
+xvfb-run --auto-servernum openscad --imgsize "${imagesize},${imagesize}" -o "${outfile}" "${temp_dir}/thumbnail.scad" ${args} >"${temp_dir}/output.log" 2>&1;
 exit_code="${?}";
 
 if [[ "${exit_code}" -ne 0 ]]; then
