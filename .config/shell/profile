@@ -13,6 +13,7 @@ unsetopt PROMPT_SP
 export EDITOR="nvim"
 export BROWSER="brave"
 export OPENER="xdg-open"
+export TERMINAL="st"
 export TERMINAL_PROG="st"
 
 # ~/ Clean-up:
