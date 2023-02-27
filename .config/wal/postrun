@@ -31,4 +31,4 @@ fix_sequences <"${XDG_CACHE_HOME:-$HOME/.cache}/wal/sequences"
 
 pkill dunst; setsid -f dunst &
 oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse &
-pywal-discord -p $HOME/.local/src/powercord/src/Powercord/themes/pywal
+pywal-discord
