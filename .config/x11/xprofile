@@ -12,7 +12,7 @@ displayselectauto &
 xbacklight -set 100 &
 sudo setkeycodes e058 245 e057 245 &
 
-autostart="mpd xcompmgr dunst unclutter pipewire remapd"
+autostart="mpd xcompmgr dunst unclutter pipewire"
 
 for program in $autostart; do
 	pidof -s "$program" || "$program" &
