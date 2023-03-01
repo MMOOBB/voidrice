@@ -26,10 +26,12 @@
         "format": "{}"
     },
     "wlr/workspaces": {
+	"format": "{icon}",
+     	"on-scroll-up": "hyprctl dispatch workspace e+1",
+     	"on-scroll-down": "hyprctl dispatch workspace e-1",
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
-        //"format": "{icon}",
         "persistent_workspaces": {
             "1": [],
             "2": [],
@@ -46,7 +48,7 @@
     "custom/updates": {
         "exec": "(pacman -Qu ; yay -Qua) | wc -l",
         "interval": 7200,
-        "format": " {}"
+        "format": "Updates: {}"
     },
    "custom/weather" : {
         "tooltip" : true,
