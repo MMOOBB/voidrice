@@ -29,10 +29,10 @@ else
 	[ -f "$zathuraconf.bak" ] && unlink "$zathuraconf" && mv "$zathuraconf.bak" "$zathuraconf"
 fi
 
-if [ -n $DISPLAY_WAYLAND ] ; then
-	swaybg -i "$bgloc" &
-else
+if [ -z $WAYLAND_DISPLAY ] ; then
 	xwallpaper --zoom "$bgloc"
 	# If running, dwm hit the key to refresh the color scheme.
 	pidof dwm >/dev/null && xdotool key super+F5
+else
+	swaybg -i "$bgloc" &
 fi

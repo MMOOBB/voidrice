@@ -160,3 +160,5 @@ element selected.active {
     background-color: #403d5220;
     color: @foreground-selected;
 }
+/* Dark theme. */
+@import "~/.cache/wal/colors-rofi-dark"
