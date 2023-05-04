@@ -16,6 +16,10 @@ export OPENER="xdg-open"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
 
+# Change the default crypto/weather monitor sites.
+# export CRYPTOURL="rate.sx"
+# export WTTRURL="wttr.in"
+
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -33,6 +37,7 @@ export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/config"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 
 # Data
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
@@ -53,6 +58,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # Cache
 export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 
 # Runtime
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
