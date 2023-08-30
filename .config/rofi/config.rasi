@@ -9,4 +9,4 @@ configuration {
 }
 /* Dark theme. */
 @import "~/.cache/wal/colors-rofi-dark"
-@theme "themes/sidetab-nord.rasi"
+/** @theme "themes/sidetab-nord.rasi" **/
